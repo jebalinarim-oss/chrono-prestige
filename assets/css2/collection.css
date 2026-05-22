@@ -1,0 +1,103 @@
+.collection-section {
+    margin-bottom: 60px;
+}
+
+.collection-titre {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #c9a84c;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding-bottom: 14px;
+    /* ligne séparatrice sous le titre de section */
+    border-bottom: 1px solid #2a2a2a;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* petit badge qui affiche le nombre de montres dans la section */
+.collection-count {
+    font-size: 0.68rem;
+    color: #888;
+    font-weight: 400;
+    letter-spacing: 1px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    padding: 2px 10px;
+    border-radius: 20px;
+}
+
+.collection-section .montres-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.collection-section .montre-card .card-img,
+.collection-section .montre-card .card-placeholder {
+    height: 220px;
+}
+
+/* badge coloré sur chaque carte de montre (dispo, vendu, réservé) */
+.col-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 10px 14px 0;
+    border-radius: 2px;
+    font-weight: 600;
+}
+
+.col-badge-ok   { 
+    background-color: #0a1a0a;
+    color: #4caf50;
+    border: 1px solid #4caf50;
+ }
+.col-badge-red  { background-color: #1a0000; color: #e53935; border: 1px solid #e53935; }
+.col-badge-warn { background-color: #1a1200; color: #f59e0b; border: 1px solid #f59e0b; }
+
+.collection-stats {
+    color: #888;
+    font-size: 0.82rem;
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+}
+
+/* les chiffres importants dans les stats sont mis en or */
+.collection-stats span {
+    color: #c9a84c;
+    font-weight: 600;
+}
+
+/* petite référence affichée sous le nom de la montre */
+.card-ref {
+    font-size: 0.72rem;
+    color: #888;
+    margin-bottom: 4px;
+    letter-spacing: 0.5px;
+}
+
+.card-specs {
+    font-size: 0.75rem;
+    color: #aaa;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* c'est le message qui s'affiche quand la montre cherchée n'est pas dans le site */
+.no-result {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.no-result .no-result-icon {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+    display: block;
+    opacity: 0.4;
+}

@@ -1,0 +1,164 @@
+/* ===== PAGE FICHE MONTRE ===== */
+
+.detail-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Image collante : reste visible quand on scrolle les infos */
+.detail-img {
+    position: sticky;
+    top: 90px;
+}
+
+.detail-img img {
+    width: 100%;
+    display: block;
+    border: 1px solid #D4B85A;
+    background-color: #fff;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.detail-img .placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #EDE8DE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    border: 1px solid #D4B85A;
+}
+
+/* ---- Colonne info ---- */
+.detail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.di-marque {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9A7B1A;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.di-titre {
+    font-size: 2rem;
+    color: #1a1a1a;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.di-prix {
+    font-size: 2.4rem;
+    color: #9A7B1A;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #E0D9C8;
+    padding-bottom: 24px;
+}
+
+/* ---- Tableau specs ---- */
+.detail-specs {
+    border: 1px solid #E0D9C8;
+    background-color: white;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.detail-specs table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.detail-specs td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid #EDE8DE;
+    vertical-align: middle;
+}
+
+.detail-specs tr:last-child td {
+    border-bottom: none;
+}
+
+.detail-specs td:first-child {
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    width: 36%;
+    background-color: #FAF7F2;
+    font-weight: bold;
+}
+
+/* ---- Description ---- */
+.di-desc {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 28px;
+    padding: 16px 18px;
+    background-color: white;
+    border-left: 3px solid #D4B85A;
+}
+
+/* ---- Bouton ajouter au panier ---- */
+.detail-actions {
+    margin-top: 4px;
+}
+
+.detail-actions .btn {
+    width: 100%;
+    text-align: center;
+    padding: 16px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    display: block;
+}
+
+/* ---- Vendeur ---- */
+.di-vendeur {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #EDE8DE;
+    font-size: 12px;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+
+.di-vendeur strong {
+    color: #9A7B1A;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+    .detail-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .detail-img {
+        position: static;
+    }
+
+    .di-titre {
+        font-size: 1.5rem;
+    }
+
+    .di-prix {
+        font-size: 1.8rem;
+    }
+}

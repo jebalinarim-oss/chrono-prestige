@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f0e8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* tous les liens sont en doré par défaut */
+a {
+    color: #c9a84c;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e8c97a;
+}
+
+header {
+    background-color: #111;
+    border-bottom: 1px solid #2a2a2a;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    color: #c9a84c;
+    font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    gap: 25px;
+}
+
+header nav a {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ccc;
+}
+
+header nav a:hover {
+    color: #c9a84c;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: #c9a84c;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: #e8e0d0;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* btn decouvrir*/
+.btn-primary {
+    background-color: #c9a84c;
+    color: #0a0a0a;
+}
+
+.btn-primary:hover {
+    background-color: #e8c97a;
+    color: #0a0a0a;
+}
+
+/* bouton explorer la collection */
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+}
+
+.btn-secondary:hover {
+    background-color: #c9a84c;
+    color: #0a0a0a;
+}
+
+/* bouton rouge pour supprimer */
+.btn-danger {
+    background-color: #8b1a1a;
+    color: #fff;
+}
+
+.btn-danger:hover {
+    background-color: #b22222;
+}
+
+.msg-success {
+    color: #4caf50;
+    padding: 10px;
+    border-left: 3px solid #4caf50;
+    margin-bottom: 15px;
+}
+
+.msg-error {
+    color: #e53935;
+    padding: 10px;
+    border-left: 3px solid #e53935;
+    margin-bottom: 15px;
+}
+
+footer {
+    background-color: #111;
+    border-top: 1px solid #2a2a2a;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+    color: #666;
+    font-size: 0.85rem;
+}

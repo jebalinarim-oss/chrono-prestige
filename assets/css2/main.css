@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F0E8;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-main {
+    flex: 1;
+    padding: 40px 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #9A7B1A;
+    margin-bottom: 24px;
+}
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 50px;
+    background-color: #F5F0E8;
+    border-bottom: 1px solid #C4A020;
+    /* sticky sig le header reste en haut même quand on scroll */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #9A7B1A;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.site-header nav {
+    display: flex;
+    gap: 30px;
+}
+
+.site-header nav a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.site-header nav a:hover,
+.site-header nav a.active {
+    color: #9A7B1A;
+    border-bottom: 2px solid #9A7B1A;
+    padding-bottom: 2px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 22px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    border: 2px solid #9A7B1A;
+    border-radius: 8px;
+    color: #9A7B1A;
+}
+
+.btn-gold {
+    background-color: #9A7B1A;
+    color: white;
+    border: none;
+}
+
+.btn-gold:hover {
+    background-color: #7A5F10;
+}
+
+/* bouton avec juste un contour */
+.btn-outline {
+    background: transparent;
+    color: #9A7B1A;
+    border: 1px solid #9A7B1A;
+}
+
+.btn-outline:hover {
+    background-color: #9A7B1A;
+    color: white;
+}
+
+/* bouton rouge pour les actions de suppression */
+.btn-red {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+}
+
+.btn-red:hover {
+    background-color: #a93226;
+}
+
+/* bouton plus petit */
+.btn-sm {
+    padding: 6px 14px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+/* dispo/vendu/revervé... */
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.badge-ok   { background-color: #e6f4ea; color: #2e7d32; }
+.badge-warn { background-color: #fff8e1; color: #b45309; }
+.badge-red  { background-color: #fdecea; color: #c0392b; }
+.badge-gold { background-color: #fdf3dc; color: #9A7B1A; }
+
+/*message succes/erreur/warning */
+.msg {
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border-left: 4px solid #9A7B1A;
+}
+
+.msg-ok {
+    background-color: #e6f4ea;
+    color: #2e7d32;
+    border-color: #2e7d32;
+}
+
+.msg-warn {
+    background-color: #fff8e1;
+    color: #b45309;
+    border-color: #b45309;
+}
+
+.msg-error {
+    background-color: #fdecea;
+    color: #c0392b;
+    border-color: #c0392b;
+}
+/*pour le menu à gauche */
+.dashboard-wrap {
+    display: flex;
+    min-height: 600px;
+}
+
+.sidebar {
+    width: 210px;
+    background-color: #EDE8DE;
+    border-right: 1px solid #D4B85A;
+    padding: 30px 0;
+}
+
+.sidebar-title {
+    font-size: 11px;
+    color: #999;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 16px 22px 6px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 22px;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.sidebar a:hover {
+    color: #9A7B1A;
+    background-color: #e0d9c8;
+}
+
+
+/* lien actif dans la sidebar = page actuellement ouverte */
+.sidebar a.active {
+    color: #9A7B1A;
+    background-color: #e0d9c8;
+    border-left: 3px solid #9A7B1A;
+}
+
+.dash-content {
+    flex: 1;
+    padding: 36px 40px;
+}
+
+.dash-content h1 {
+    font-size: 22px;
+    color: #333;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* combienn de montres/cmbien sont vendus... */
+.stats-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.stat-box {
+    background-color: white;
+    border: 1px solid #D4B85A;
+    padding: 20px 24px;
+    min-width: 120px;
+}
+
+.stat-box .val {
+    font-size: 26px;
+    color: #9A7B1A;
+    font-weight: bold;
+}
+
+.stat-box .lbl {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+}
+
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.data-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background-color: #EDE8DE;
+    color: #666;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-bottom: 1px solid #D4B85A;
+}
+
+.data-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #e8e2d4;
+    color: #333;
+    vertical-align: middle;
+}
+
+.data-table tr:hover td {
+    background-color: #faf7f0;
+}
+
+.form-card {
+    background-color: white;
+    border: 1px solid #D4B85A;
+    padding: 30px;
+    max-width: 420px;
+    margin: 0 auto 40px;
+}
+
+.page-main > .msg {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #D4B85A;
+    background-color: #F5F0E8;
+    font-size: 14px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    outline: none;
+}
+
+/* contour doré quand on clique sur un champ */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #9A7B1A;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.footer,
+.site-footer {
+    background-color: #f0ede7;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 30px 50px;
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+.footer-links a,
+.site-footer a {
+    color: #C4A020;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.site-footer a:hover {
+    color: #9A7B1A;
+}
+
+.copyright {
+    color: #888;
+    font-size: 12px;
+}
+
+.watch-card {
+    background: white;
+    border: 1px solid #D4B85A;
+    padding: 28px 22px;
+    flex: 1;
+    min-width: 200px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.watch-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-color: #9A7B1A;
+}
+
+.commande-card {
+    background-color: white;
+    border: 1px solid #D4B85A;
+    padding: 25px 30px;
+    margin-bottom: 16px;
+}
+
+.cc-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cc-id { 
+    color: #888; 
+    font-size: 13px; 
+}
+.cc-titre { 
+    font-size: 15px; 
+    color: #333; 
+    margin-bottom: 6px; 
+}
+.cc-prix { 
+    color: #9A7B1A; 
+    font-weight: bold; 
+}
+.cc-date { 
+    font-size: 12px; 
+    color: #aaa; 
+    margin-top: 8px; 
+}
+
+
+.panier-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    align-items: start;
+}
+
+.panier-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    border: 1px solid #D4B85A;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.panier-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.pi-placeholder {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f0e8;
+    font-size: 2rem;
+}
+
+.pi-titre a { 
+    color: #9A7B1A; 
+    font-weight: bold; 
+}
+.pi-marque  { 
+    color: #888; 
+    font-size: 13px; 
+}
+.pi-prix    { 
+    color: #9A7B1A; 
+    font-weight: bold; 
+    font-size: 1.1rem; 
+    margin-left: auto; 
+}
+
+.panier-recap {
+    background-color: white;
+    border: 1px solid #D4B85A;
+    padding: 24px;
+    position: sticky;
+    top: 80px;
+}
+
+.panier-recap h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #9A7B1A;
+    margin-bottom: 16px;
+}
+
+.recap-ligne {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.recap-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: #9A7B1A;
+    font-size: 1.1rem;
+    border-top: 1px solid #D4B85A;
+    padding-top: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.btn-fav {
+    background: transparent;
+    border: 1px solid #D4B85A;
+    color: #9A7B1A;
+    padding: 10px 13px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.btn-fav:hover,
+.active-fav {
+    background-color: #fdf3dc;
+    border-color: #9A7B1A;
+}
+
+/* ===== PROFIL ===== */
+.profil-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+.profil-card {
+    background-color: white;
+    border: 1px solid #D4B85A;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.pc-avatar {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #9A7B1A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+}
+
+.pc-name {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.pc-email {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 12px;
+}
+
+/* badge admin/vendeur/client sur le profil */
+.badge-admin   { 
+    background-color: #fdecea; 
+    color: #c0392b; 
+    border: 1px solid #c0392b; 
+}
+.badge-vendeur { 
+    background-color: #fdf3dc; 
+    color: #9A7B1A; 
+    border: 1px solid #9A7B1A; 
+}
+.badge-client  {
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+/* Compteur panier dans le header */
+.badge-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    background-color: #9A7B1A;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 9px;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+@keyframes badge-pop {
+    0%   { transform: scale(1); }
+    50%  { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}

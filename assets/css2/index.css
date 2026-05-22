@@ -1,0 +1,110 @@
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    background-color: #F5F0E8;
+    color: #333333;
+    border-bottom: 2px solid #C4A020;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-title {
+    font-size: 48px;
+    color: #9A7B1A;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 36px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #9A7B1A;
+    color: white;
+    border: 2px solid #9A7B1A;
+    transition: background-color 0.22s, transform 0.15s, box-shadow 0.22s;
+}
+
+.btn-primary:hover {
+    background-color: #7A5F10;
+    border-color: #7A5F10;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(154, 123, 26, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #9A7B1A;
+    border: 2px solid #9A7B1A;
+    transition: background-color 0.22s, color 0.22s, transform 0.15s, box-shadow 0.22s;
+}
+
+.btn-secondary:hover {
+    background-color: #9A7B1A;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(154, 123, 26, 0.3);
+}
+
+.content-section {
+    padding: 60px 50px;
+    background-color: #EDE8DE;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #333;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-bottom: 36px;
+    padding-left: 14px;
+    border-left: 4px solid #9A7B1A;
+}
+
+.cards {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.watch-card {
+    background: white;
+    border: 1px solid #D4B85A;
+    padding: 28px 22px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.watch-card h3 {
+    font-size: 14px;
+    color: #9A7B1A;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.watch-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
